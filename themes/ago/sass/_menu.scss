@@ -35,8 +35,8 @@ $sliding-menu-color-hover: #fff;
     color: $centered-navigation-color;
 
     .fa {
-      margin-top:0.2em;
-      font-size: 2.5em;
+      margin-top:0.15em;
+      font-size: 3em;
     }
 
     @include media($horizontal-bar-mode) {
@@ -47,21 +47,20 @@ $sliding-menu-color-hover: #fff;
   button {
     display: inline;
     float: right;
-    margin: 0.9em;
     padding:0;
-    height: 2em;
-    width: 2em;
+    margin: 0.8em 2em;
+    height: 3em;
+    width: 3em;
     background-color: transparentize($base-font-color, 0.3);
 
     @include media ($horizontal-bar-mode) {
       display: none;
     }
 
-    img {
-      opacity: .6;
-      margin: 0;
+    .fa {
+      padding: 0.1em;
+      font-size: 2em;
     }
-
   }
 
   // Nav menu
@@ -138,8 +137,10 @@ $sliding-menu-color-hover: #fff;
   }
 
   .logo .fa {
-    font-size: 1.6em;
+    font-size: 2em;
+    padding:0;
     opacity: .6;
+    vertical-align: middle;
   }
 
   // Sub menus

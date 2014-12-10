@@ -1,0 +1,20 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+{{ $baseurl := .Site.BaseUrl }}
+{{ $infomap := .Params.categoryinfo }}
+
+<section id="category-list">
+
+  <h1>{{ .Title }}</h1>
+
+	<ul id="all-tags">
+	  {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+	    {{ $info := index $infomap $name }}
+	    <li>{{ $info.icon | safeHtml }}<a href="/categories/{{ $name | urlize }}">{{ $info.title }}</a></li>
+	  {{ end }}
+	</ul>
+
+</section>
+
+{{ partial "footer.html" . }}

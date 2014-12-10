@@ -1,4 +1,4 @@
-baseurl = "http://localhost:1313/"
+baseurl = "http://tomhelmer.github.io"
 languageCode = "en-us"
 title = "Thehome"
 
@@ -16,10 +16,6 @@ description = "My site"
     name = "Home"
     identifier = "home"
     url = "/"
-
-[[menu.main]]
-  name = "About"
-  identifier = "about"
 
 [[menu.main]]
   name = "Articles"
