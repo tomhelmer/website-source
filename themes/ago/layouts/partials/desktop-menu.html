@@ -1,0 +1,44 @@
+<!--Main menu top-->
+<ul class="centered-navigation-menu">
+  {{ $currentNode := . }}
+  {{ $logo := .Site.Params.logo | safeHtml }}
+  {{ range .Site.Menus.main }}
+    {{ if .HasChildren }}
+
+    <li class="nav-link more{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
+    <a href="{{.Url}}">
+        {{ .Pre }}<span>{{ .Name }}</span>
+    </a>
+    <ul class="submenu">
+        {{ range .Children }}
+          {{ if .HasChildren }}
+            <li class="navlink more{{if $currentNode.HasMenuCurrent "main" . }} active-trail{{end}}">
+              <a href="{{.Url}}"> {{ .Name }} </a>
+              <ul class="submenu">
+              {{ range .Children }}
+                <li class="{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
+                  {{ .Pre }}
+                  <a href="{{.Url}}"> {{ .Name }} </a>
+                </li>
+              {{ end }}
+              </ul>
+            </li>
+          {{else}}
+             <li class="nav-link{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
+               <a href="{{.Url}}"> {{ .Name }} </a>
+             </li>
+          {{ end }}
+        {{ end }}
+    </ul>
+   </li>
+  {{else}}
+    <li class="nav-link {{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
+      {{ if eq .Identifier "home" }}
+        <a href="{{.Url}}" class="logo">{{ $logo }}</a>
+      {{else}}
+        <a href="{{.Url}}">{{ .Pre }} <span>{{ .Name }}</span></a>
+      {{end}}
+    </li>
+  {{end}}
+  {{end}}
+</ul>

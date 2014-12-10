@@ -1,0 +1,27 @@
+baseurl = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Thehome"
+
+description = "My site"
+
+[indexes]
+    category = "categories"
+    tag = "tags"
+
+[params]
+    logo = "<i class=\"fa fa-home\"></i>"
+    cdnprefix = "http://res.cloudinary.com/thehome-dk/image/upload/"
+
+[[menu.main]]
+    name = "Home"
+    identifier = "home"
+    url = "/"
+
+[[menu.main]]
+  name = "About"
+  identifier = "about"
+
+[[menu.main]]
+  name = "Articles"
+  identifier = "articles"
+  url = "/article"

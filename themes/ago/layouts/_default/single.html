@@ -1,0 +1,37 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+{{ $baseurl := .Site.BaseUrl }}
+{{ $categories := .Params.categories }}
+{{ $tags := .Params.tags }}
+
+<section>
+<article class="single">
+
+  <div class="taxonomy">
+	<p class="categories">
+	  {{ with $categories }}
+	      Posted in
+	      {{ range $categories }}
+	          <a href="{{ $baseurl }}/categories/{{ . | urlize }}">{{ . }}</a>
+	      {{ end }}
+	  {{ end }}
+	</p>
+
+  <p class="tags">
+	  {{ with $tags }}
+	      Tagged with
+	      {{ range $tags }}
+	          <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>
+	      {{ end }}
+	  {{ end }}
+	</p>
+	</div>
+
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <hr><p class="author">{{ .Params.author }}</p>
+</div>
+</section>
+
+{{ partial "footer.html" . }}

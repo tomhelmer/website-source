@@ -1,0 +1,20 @@
+<!--Mobile menu-->
+
+{{ $currentNode := . }}
+{{ $logo := .Site.Params.logo | safeHtml }}
+
+<a href="{{.Site.BaseUrl}}" class="mobile-logo">{{$logo}}</a>
+
+<button type="button" class="js-menu-trigger">
+  <img src="../../images/menu-white.png" alt="Menu Icon">
+</button>
+
+<nav class="js-menu sliding-menu-content">
+  <ul>
+  {{ range .Site.Menus.main }}
+   <li class="navlink more{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
+     <a href="{{.Url}}">{{ .Pre }}<span>{{ .Name }}</span></a>
+   </li>
+     {{end}}
+  </ul>
+</nav>

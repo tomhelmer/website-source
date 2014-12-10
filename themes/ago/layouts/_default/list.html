@@ -1,0 +1,13 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+{{ $baseurl := .Site.BaseUrl }}
+
+<section id="article-list">
+   <h1 id="title">{{ .Title }}</h1>
+    {{ range .Data.Pages.Reverse }}
+        {{ .Render "summary"}}
+    {{ end }}
+</section>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,102 @@
+footer {
+  @include clearfix;
+  margin-top: 1em;
+
+  $footer-background: desaturate(darken($base-accent-color, 20), 30);
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, .6);
+  $footer-disclaimer-color: transparentize($footer-color, .6);
+
+  background: $footer-background;
+  padding: $base-spacing;
+  padding-bottom: 3em;
+  width: 100%;
+
+  height : 10em;
+
+  @include media($large-screen) {
+    height : 4.5em;
+  }
+
+  .footer-logo {
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    @include media($large-screen) {
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+
+  .footer-logo img {
+    height: 1.6em;
+  }
+
+  ul {
+    margin-bottom: 1em;
+    @include media($large-screen) {
+      float: left;
+      margin-left: 1em;
+      margin-bottom: 0;
+    }
+  }
+
+  ul li {
+    padding-right: 1em;
+    font-weight: 800;
+
+    @include media($large-screen) {
+      display: inline;
+      text-align: left;
+    }
+  }
+
+  ul li a {
+    color: $footer-link-color;
+
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+  }
+
+  .footer-primary-links {
+    @include span-columns(6);
+  }
+
+  .footer-secondary-links {
+    @include span-columns(6);
+
+    @include media($large-screen) {
+      float: right;
+    }
+
+    li {
+      font-size: .8em;
+      font-weight: 400;
+      float: right;
+    }
+
+    ul.footer-social {
+      @include clearfix;
+float: right;
+      li {
+        float: right;
+        font-size: 1em;
+        padding-right: .7em;
+      }
+
+      img {
+        opacity: .7;
+        height: 3em;
+        padding: 1px;
+
+        &:hover {
+          opacity: 1;
+        }
+        @include media($large-screen) {
+          height: 1.5em;
+          float: right;
+        }
+      }
+    }
+  }
+}

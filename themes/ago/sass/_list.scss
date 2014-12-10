@@ -1,0 +1,47 @@
+article.summary {
+
+  $comment-color: $base-font-color;
+  $comment-background: lighten($base-accent-color, 15);
+  $comment-detail-color: transparentize($comment-color, .5);
+
+  display: table;
+  width: 100%;
+  margin-bottom: $base-spacing;
+  padding-bottom: 1em;
+  border-bottom: 1px solid transparentize($comment-color, .9);
+
+  .image,
+  .content {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .image {
+    padding-right: 1em;
+
+    > img {
+      width: 10em;
+      height: auto;
+      padding-top: 6px;
+      display: block;
+      max-width: none;
+    }
+
+  }
+
+  .content {
+    width: 100%;
+
+    p {
+      margin-bottom: .5em;
+      font-size: 0.9em;
+    }
+
+    p.detail {
+      font-style: italic;
+      font-size: .9em;
+      color: $comment-detail-color;
+    }
+  }
+}
+

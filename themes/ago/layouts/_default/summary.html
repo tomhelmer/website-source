@@ -1,0 +1,12 @@
+{{ $cdnprefix := .Site.Params.cdnprefix }}
+<article class="summary">
+  <div class="image">
+    <img src="{{ $cdnprefix }}/t_article-square-image/{{ .Params.image }}" alt="Article image">
+  </div>
+  <div class="content">
+    <h2>{{ .Title }}</h2>
+    <p>{{ .Summary }}</p>
+    <a href='{{ .Permalink }}'><button>Read more</button></a>
+    <p class="detail">{{ .Date.Format "Mon, Jan 2, 2006" }} - {{ .FuzzyWordCount }} Words</p>
+  </div>
+</article>
