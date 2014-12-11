@@ -34,7 +34,7 @@
   {{else}}
     <li class="nav-link {{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
       {{ if eq .Identifier "home" }}
-        <a href="{{.Url}}" class="logo">{{ $logo }}</a>
+        <a href="{{.Url}}" class="logo">{{ $logo }} Thehome</a>
       {{else}}
         <a href="{{.Url}}">{{ .Pre }} <span>{{ .Name }}</span></a>
       {{end}}

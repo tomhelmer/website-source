@@ -3,7 +3,7 @@ date = "2014-12-04T20:17:50+01:00"
 draft = false
 title = "My third article"
 image = "bulb.jpg"
-categories = ["Drupal"]
+categories = ["Drupal", "osx"]
 tags = ["Subsites", "Deployment"]
 author = "Tom Helmer Hansen"
 +++

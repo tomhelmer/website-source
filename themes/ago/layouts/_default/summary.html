@@ -1,9 +1,9 @@
 {{ $cdnprefix := .Site.Params.cdnprefix }}
 <article class="summary">
-  <div class="image">
-    <img src="{{ $cdnprefix }}/t_article-square-image/{{ .Params.image }}" alt="Article image">
-  </div>
   <div class="content">
+	  <div class="image">
+	    <img src="{{ $cdnprefix }}/t_article-square-image/{{ .Params.image }}" alt="Article image">
+	  </div>
     <h2>{{ .Title }}</h2>
     <p>{{ .Summary }}</p>
     <a href='{{ .Permalink }}'><button>Read more</button></a>

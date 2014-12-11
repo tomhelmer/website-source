@@ -8,12 +8,20 @@
 
   <h1>{{ .Title }}</h1>
 
-	<ul id="all-tags">
+	<div class="categories">
 	  {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-	    {{ $info := index $infomap $name }}
-	    <li>{{ $info.icon | safeHtml }}<a href="/categories/{{ $name | urlize }}">{{ $info.title }}</a></li>
+      {{ with index $infomap $name }}
+	    <div class="category">
+	    <a href="/categories/{{ $name | urlize }}"> 
+		    <div class="image">{{ .icon | safeHtml }}</div>
+	      <h2>{{ .title }}</h2>
+	      <p>{{ .description }}</p>
+      </a>
+      </div>
+
+      {{ end }}
 	  {{ end }}
-	</ul>
+	</div>
 
 </section>
 

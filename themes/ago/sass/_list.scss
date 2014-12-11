@@ -14,19 +14,29 @@ article.summary {
   .content {
     display: table-cell;
     vertical-align: top;
+    float:left;
   }
 
   .image {
     padding-right: 1em;
+    padding-bottom: 0.5em;
 
     > img {
-      width: 10em;
+      width: 5em;
       height: auto;
       padding-top: 6px;
       display: block;
       max-width: none;
     }
 
+  }
+
+  @include media($large-screen) {
+    .image {
+      > img {
+        width: 10em;
+      }
+    }
   }
 
   .content {

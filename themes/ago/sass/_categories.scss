@@ -1,0 +1,54 @@
+div.categories {
+
+  $comment-color: $base-font-color;
+  $comment-background: lighten($base-accent-color, 15);
+  $comment-detail-color: transparentize($comment-color, .5);
+
+  display: table;
+  width: 100%;
+  margin-bottom: $base-spacing;
+  padding-bottom: 1em;
+
+  .category {
+    display: table-cell;
+    float:left;
+    border-bottom: 1px solid transparentize($comment-color, .9);
+    padding: 1em 0;
+    width: 100%;
+    @include clearfix;
+  }
+
+  .image {
+    i { font-size: 3em; }
+    img { width: 2.5em; }
+    width: 4em;
+    padding-left:0.5em;
+    vertical-align: center;
+    display: table-cell;
+    float:left;
+  }
+
+  @include media($large-screen) {
+    .category {
+      max-width: 50%;
+      min-height: 10em;
+      padding-right: 2em;
+    }
+    .image {
+      i { font-size: 4em; }
+      img { width: 3.5em; }
+      width: 5em;
+    }
+  }
+
+  p {
+    margin-left: 5em;
+    margin-bottom: .5em;
+    font-size: 0.8em;
+    @include media($large-screen) {
+      font-size: 1em;
+    }
+  }
+
+}
+

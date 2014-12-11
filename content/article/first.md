@@ -3,6 +3,9 @@ title = "My first article"
 date = "2014-12-04T20:17:50+01:00"
 draft = false
 image = "keyboard.jpg"
+categories = ["Hugo"]
+tags = ["Themes"]
+author = "Tom Helmer Hansen"
 +++
 
 ## These override some of the styles specified in the _variables.scss and _typography.scss partials in Bitters. You can replace the typography variables and the header font specifications in Bitters with these styles. Then you won’t need the wrapping class .type-system-name.

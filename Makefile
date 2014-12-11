@@ -15,7 +15,7 @@ view:
 
 server: clean
 	# Server the site up locally
-	hugo server -w --theme=ago --buildDrafts=true
+	open http://localhost:1313 && hugo server -w --theme=ago --buildDrafts=true
 
 clean:
 	# clean out the local server build artifacts
