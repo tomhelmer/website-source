@@ -38,11 +38,10 @@
 <div id="muut-custom"></div>
 
 <link rel="stylesheet" href="//cdn.moot.it/latest/moot.css">
-<script src="//cdn.muut.com/1/moot.min.js"></script>
-<style> 
-  a.m-login { display:none; }
-  a.m-sso-link { display:none; }
-  #moot-logo { padding : 0;}
+
+<style>
+  /*a.m-login { display:none; }
+  a.m-sso-link { display:none; }*/
   .m-controls button {
 		background-color: #606c88;
 		border-radius: 3px;
@@ -57,31 +56,37 @@
   }
 </style>
 
+
+<a class="muut" href="https://muut.com/i/thehome/comments:{{ trim ( replace .RelPermalink "/" "-" ) "-" }}" data-show_title="false">Comments</a>
+<script src="//cdn.muut.com/1/moot.min.js"></script>
+
+
 <script>
 
-  var conf = {
-  	 login_url: 'https://adapt.dk/',
-     url: "https://muut.com/i/thehome/comments:{{ trim ( replace .RelPermalink "/" "-" ) "-" }}",
-     show_online: true,
-     upload: false
-     //api : { }
-  };
+  // var conf = {
+  // 	 //login_url: 'https://adapt.dk/',
+  //    url: "https://muut.com/i/thehome/comments:{{ trim ( replace .RelPermalink "/" "-" ) "-" }}",
+  //    show_online: true,
+  //    upload: false
+  //    //api : { }
+  // };
 
-	$.ajax({
-	   type: 'GET',
-	    url: "http://dsr.dev/auth.php?callback=?",
-	    async: false,
-	    jsonpCallback: 'jsonCallback',
-	    contentType: "application/json",
-	    dataType: 'jsonp',
-	    success: function(json) {
-	       conf.api = json.api;
-	       $("#muut-custom").muut(conf);
-	    },
-	    error: function(e) {
-	       // console.log(e.message);
-	    }
-	});
+	// $.ajax({
+	//    type: 'GET',
+	//     url: "http://dsr.dev/auth.php?callback=?",
+	//     async: false,
+	//     jsonpCallback: 'jsonCallback',
+	//     contentType: "application/json",
+	//     dataType: 'jsonp',
+	//     success: function(json) {
+	//        conf.api = json.api;
+	//        $("#muut-custom").muut(conf);
+	//     },
+	//     error: function(e) {
+	//        // console.log(e.message);
+	//     }
+	// });
+	//$("#muut-custom").muut(conf);
 
 </script>
 
