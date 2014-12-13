@@ -21,3 +21,4 @@ description = "My site"
   name = "Articles"
   identifier = "articles"
   url = "/article"
+  weight = 1

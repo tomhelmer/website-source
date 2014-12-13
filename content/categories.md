@@ -4,6 +4,7 @@ draft = false
 title = "Categories"
 menu = "main"
 layout = "category-list"
+weight = 5
 
 [categoryinfo.drupal]
   title = "Drupal"
