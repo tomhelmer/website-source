@@ -21,5 +21,5 @@ And when it comes to hosting:
 - Comments are hosted by Muut (https://muut.com)
 - Statistics are done by Google Analytics
 
-
-<a href="http://dk.linkedin.com/in/thelmer"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Tom Helmer Hansen's LinkedIn profile" style="vertical-align:middle;" border="0">&nbsp;View Tom Helmer Hansen's LinkedIn profile</span></a>
+<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/MemberProfile" data-id="/in/thelmer" data-format="inline" data-related="false"></script>
