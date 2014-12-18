@@ -11,10 +11,18 @@
 
 <nav class="js-menu sliding-menu-content">
   <ul>
-  {{ range .Site.Menus.main }}
-   <li class="navlink more{{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
+    <li class="js-menu-close">
+      <a href="#">
+        <i class="fa fa-bars"></i>
+        <span>Close</span>
+        <i class="fa fa-arrow-circle-right"></i></a>
+    </li>
+    {{ range .Site.Menus.main }}
+    <li class="navlink {{if $currentNode.IsMenuCurrent "main" . }} active{{end}}">
      <a href="{{.Url}}">{{ .Pre }}<span>{{ .Name }}</span></a>
-   </li>
-     {{end}}
+    </li>
+    {{end}}
   </ul>
 </nav>
+
+<div class="js-menu-screen menu-screen"></div>

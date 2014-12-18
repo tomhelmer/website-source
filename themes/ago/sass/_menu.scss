@@ -5,11 +5,11 @@ $sliding-menu-color: #fff;
 $sliding-menu-border: 1px solid $sliding-menu-border-color;
 $sliding-menu-background-hover: $base-accent-color;
 $sliding-menu-color-hover: #fff;
+$centered-navigation-background: #3f4c6b;
 
 .centered-navigation {
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 3em;
-  $centered-navigation-background: #3f4c6b;
   $centered-navigation-color: transparentize(#FFFFFF, 0.3);
   $centered-navigation-color-hover: #FFFFFF;
   $centered-navigation-height: 60px;
@@ -19,13 +19,7 @@ $sliding-menu-color-hover: #fff;
   $centered-navigation-item-nudge: 2.2em;
   $horizontal-bar-mode: $large-screen;
 
-  background: -webkit-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%); /* Chrome 10+, Saf5.1+ */
-  background:    -moz-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%); /* FF3.6+ */
-  background:     -ms-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%); /* IE10 */
-  background:      -o-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%); /* Opera 11.10+ */
-  background:         linear-gradient(90deg, #606c88 10%, #3f4c6b 90%); /* W3C */
-
-  //background-color: $centered-navigation-background;
+  background-color: $centered-navigation-background;
   border-bottom: 1px solid darken($centered-navigation-background, 6);
   font-family: $serif;
   height: $centered-navigation-height;
@@ -263,9 +257,9 @@ $sliding-menu-color-hover: #fff;
 }
 
 .sliding-menu-content {
-  @include position(fixed, 0px auto 0px 0px);
+  @include position(fixed, 0px -220px null null);
   @include size(220px 100%);
-  @include transform(translateX(-220px));
+  @include transform(translateX(220px));
   @include transition(all .25s linear);
   background: $sliding-menu-background;
   z-index: 999999;
@@ -273,6 +267,7 @@ $sliding-menu-color-hover: #fff;
   -webkit-overflow-scrolling: touch;
 
   li a {
+    height:100%;
     border-bottom: $sliding-menu-border;
     color: $sliding-menu-color;
     display: block;
@@ -286,8 +281,18 @@ $sliding-menu-color-hover: #fff;
   }
 
   &.is-visible {
-    @include transform(translateX(0));
+    @include transform(translateX(-220px));
   }
+
+  li.js-menu-close i { font-size: 1.3em; margin-right: 0.5em; }
+  li.js-menu-close i.fa-arrow-circle-right { float:right; }
+  li.js-menu-close {
+    margin-top: 8px;
+    height: 60px;
+    background-color: $centered-navigation-background;
+    border-bottom: 1px solid darken($centered-navigation-background, 6);
+  }
+
 }
 
 .menu-screen {
@@ -303,3 +308,5 @@ $sliding-menu-color-hover: #fff;
     visibility: visible;
   }
 }
+
+
