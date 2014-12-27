@@ -134,4 +134,12 @@ The image sizes are needed by PhotoSwipe.
 
 		<script>initPhotoSwipeFromDOM('.gallery');</script>
 
+Todo:
+
+- Use image size property to get image transformation
+- Make it configurable if image should be shown in thumbnails
+- Clean up CSS, move it to SASS
+- Implement responsive images
+
+
 {{% galleryinit %}}
