@@ -1,6 +1,6 @@
 +++
-date = "2014-12-07T20:17+01:00"
-draft = true
+date = "2014-12-27"
+draft = false
 title = "Gallery in Hugo with PhotoSwipe and shortcodes"
 image = "gallery.png"
 categories = ["Hugo"]
