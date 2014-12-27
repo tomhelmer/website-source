@@ -947,16 +947,6 @@ article.single h2 {
   margin-bottom: 1.2em;
 }
 /* line 39, ../../sass/_article.scss */
-article.single code {
-  white-space: nowrap;
-  background: #F7F7F7;
-  border: 1px solid #E0E0E0;
-  border-radius: 4.5px;
-  padding: .1em .4em;
-  font-size: .8em;
-  font-style: normal;
-}
-/* line 49, ../../sass/_article.scss */
 article.single h3 {
   font-family: "Roboto Slab", serif;
   font-size: 1em;
@@ -965,28 +955,28 @@ article.single h3 {
   line-height: 1.4em;
   margin-bottom: .5em;
 }
-/* line 58, ../../sass/_article.scss */
+/* line 48, ../../sass/_article.scss */
 article.single p.date {
   color: rgba(51, 51, 51, 0.4);
   font-family: "Roboto Slab", serif;
   font-size: .8em;
   margin-bottom: .5em;
 }
-/* line 65, ../../sass/_article.scss */
+/* line 55, ../../sass/_article.scss */
 article.single p {
   font-family: "Roboto Slab", serif;
   font-weight: 300;
   letter-spacing: 1;
   margin-bottom: 1.5em;
 }
-/* line 71, ../../sass/_article.scss */
+/* line 61, ../../sass/_article.scss */
 article.single p span {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: .8em;
   text-transform: uppercase;
 }
-/* line 79, ../../sass/_article.scss */
+/* line 69, ../../sass/_article.scss */
 article.single a.read-more {
   display: inline-block;
   font-family: "Roboto Slab", serif;
@@ -996,24 +986,24 @@ article.single a.read-more {
   margin-left: .2em;
   position: relative;
 }
-/* line 88, ../../sass/_article.scss */
+/* line 78, ../../sass/_article.scss */
 article.single a.read-more span {
   position: absolute;
   font-size: 1.8em;
   top: -2px;
   right: -12px;
 }
-/* line 96, ../../sass/_article.scss */
+/* line 86, ../../sass/_article.scss */
 article.single ul {
   list-style-type: square;
   margin-left: 2em;
   margin-bottom: 1em;
 }
-/* line 102, ../../sass/_article.scss */
+/* line 92, ../../sass/_article.scss */
 article.single hr {
   width: 3em;
 }
-/* line 106, ../../sass/_article.scss */
+/* line 96, ../../sass/_article.scss */
 article.single p.author {
   font-family: "Roboto Slab", serif;
 }
