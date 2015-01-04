@@ -1,5 +1,8 @@
+
+$teaser-background-color: $light-gray;
+
 article.teaser {
-  background: #EEEEEE;
+  background-color: $teaser-background-color;
   @include span-columns(12);
   margin-bottom: 0.5em;
 
@@ -7,11 +10,19 @@ article.teaser {
     height:100px;
   }
 
+  a { color: $dark-gray; }
+  a:hover { color: $dark-gray; }
+
   @include media($large-screen) {
     @include span-columns(6);
     @include omega(2n);
     .image {
       height:200px;
+    }
+
+    &:hover {
+      background-color: lighten($teaser-background-color,2);
+      .image { opacity: 0.8; }
     }
   }
 
@@ -29,19 +40,8 @@ article.teaser {
     margin-bottom: .5em;
   }
 
-  .content h4 {
-    background: #BBB;
-    color: white;
-    display: inline-block;
-    font-size: .5em;
-    font-weight: 800;
-    margin-bottom: 1.3em;
-    padding: 3px 8px;
-    text-transform: uppercase;
-  }
-
   .content p {
-    color: gray;
+    color: $dark-gray;
     font-size : 0.8em;
     margin-bottom: 0.5em;
     height: 100px;

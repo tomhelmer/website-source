@@ -5,13 +5,15 @@
 <section class="articles">
   {{ range first 6 (where .Data.Pages "Section" "article") }}
     <article class="teaser">
-      <div class="image" style="background: url({{ $cdnprefix }}/t_article-main-image/{{ .Params.image }}) center center no-repeat; background-size: cover;">
-      </div>
-      <div class="content">
-          <h2>{{ .Title }}</h2>
-          <p class="summary">{{ .Summary }}</p>
-          <a href="{{ .Permalink }}"><button>Read more</button></a>
-      </div>
+      <a href="{{ .Permalink }}">
+        <div class="image" style="background: url({{ $cdnprefix }}/t_article-main-image/{{ .Params.image }}) center center no-repeat; background-size: cover;">
+        </div>
+        <div class="content">
+            <h2>{{ .Title }}</h2>
+            <p class="summary">{{ .Summary }}</p>
+            <button>Read more</button>
+        </div>
+    </a>
   </article>
   {{ end }}
 </section>

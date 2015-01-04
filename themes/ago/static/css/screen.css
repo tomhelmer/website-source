@@ -823,9 +823,9 @@ footer .footer-secondary-links ul.footer-social img:hover {
   }
 }
 
-/* line 1, ../../sass/_teaser.scss */
+/* line 4, ../../sass/_teaser.scss */
 article.teaser {
-  background: #EEEEEE;
+  background-color: #DDD;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -836,12 +836,20 @@ article.teaser {
 article.teaser:last-child {
   margin-right: 0;
 }
-/* line 6, ../../sass/_teaser.scss */
+/* line 9, ../../sass/_teaser.scss */
 article.teaser .image {
   height: 100px;
 }
+/* line 13, ../../sass/_teaser.scss */
+article.teaser a {
+  color: #333;
+}
+/* line 14, ../../sass/_teaser.scss */
+article.teaser a:hover {
+  color: #333;
+}
 @media screen and (min-width: 53.75em) {
-  /* line 1, ../../sass/_teaser.scss */
+  /* line 4, ../../sass/_teaser.scss */
   article.teaser {
     float: left;
     display: block;
@@ -860,42 +868,39 @@ article.teaser .image {
   article.teaser:nth-child(2n+1) {
     clear: left;
   }
-  /* line 13, ../../sass/_teaser.scss */
+  /* line 19, ../../sass/_teaser.scss */
   article.teaser .image {
     height: 200px;
   }
+  /* line 23, ../../sass/_teaser.scss */
+  article.teaser:hover {
+    background-color: #e2e2e2;
+  }
+  /* line 25, ../../sass/_teaser.scss */
+  article.teaser:hover .image {
+    opacity: 0.8;
+  }
 }
-/* line 18, ../../sass/_teaser.scss */
+/* line 29, ../../sass/_teaser.scss */
 article.teaser .content {
   padding: 1em 1em 1em 1em;
   height: 200px;
 }
 @media screen and (min-width: 53.75em) {
-  /* line 18, ../../sass/_teaser.scss */
+  /* line 29, ../../sass/_teaser.scss */
   article.teaser .content {
     padding: 0.9em;
   }
 }
-/* line 26, ../../sass/_teaser.scss */
+/* line 37, ../../sass/_teaser.scss */
 article.teaser .content h2 {
   font-size: 1em;
   margin-top: .5em;
   margin-bottom: .5em;
 }
-/* line 32, ../../sass/_teaser.scss */
-article.teaser .content h4 {
-  background: #BBB;
-  color: white;
-  display: inline-block;
-  font-size: .5em;
-  font-weight: 800;
-  margin-bottom: 1.3em;
-  padding: 3px 8px;
-  text-transform: uppercase;
-}
 /* line 43, ../../sass/_teaser.scss */
 article.teaser .content p {
-  color: gray;
+  color: #333;
   font-size: 0.8em;
   margin-bottom: 0.5em;
   height: 100px;

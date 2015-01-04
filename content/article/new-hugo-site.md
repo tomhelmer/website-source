@@ -26,7 +26,7 @@ I have written my own theme for Hugo based on Sass, Bourbon and Neat. The theme 
 - Google Analytics tracking
 - Muut article comments
 
-I host my images on cloudinary, they have a free plan for small sites. I cloudinary you can make named images transformations. Images are inserted by the templates like this :
+I host my images on cloudinary, they have a free plan for small sites. With cloudinary you can make named images transformations. Images are inserted by the templates like this :
 
     <img src="{{ $cdnprefix }}/t_article-square-image/{{ .Params.image }}" alt="Article image">
 

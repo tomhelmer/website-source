@@ -11,11 +11,11 @@ gallerythumbnail = "t_thumbnail"
 
 In this article I will show how to implement a gallery based on PhotoSwipe (http://photoswipe.com) a really cool vanilla javascript image gallery with responsive behaviour, touch gestures, animations, zoom, sharing links and browser history. The browser history support makes it possible to link to a [specific image](?#&gid=1&pid=2), usefull when sharing. It's possible to implement responsive image loading with PhotoSwipe, but I haven't done this yet.
 
-{{% gallery title="Example gallery" %}}
+{{< gallery title="Example gallery" >}}
 {{% galleryimage file="DSC_1283" size="1280x885" caption="This is me in Rome" copyrightHolder="Rasmus Helmer Hansen" %}}
 {{% galleryimage file="DSC_1350" size="993x1280" caption="This is Andrea in Rome" copyrightHolder="Tom Helmer Hansen" %}}
 {{% galleryimage file="DSC_1648" size="1280x857" caption="Rain reservoir in the hall." copyrightHolder="Tom Helmer Hansen" %}}
-{{% /gallery %}}
+{{< /gallery >}}
 
 
 It's possible to initialize the gallery from DOM, so I don't need to handle any JSON objects. I have build the DOM based on [Schema.org markup for image gallery](http://schema.org/ImageGallery) with the two shortcodes: "gallery" and "galleryimage". A third shortcode "galleryinit" adds the relevant javascript/css and initializes the galleries on the page (multiple galleries on the same page is supported).
@@ -28,13 +28,13 @@ I use Cloudinary to serve the images and these three settings from the page fron
 	galleryfolder = "gallery-1"
 	gallerythumbnail = "t_thumbnail"
 
-The shortcodes for the example gallery on this page looks like this ( an extra space is added before % so the codes aren't rendered):
+The shortcodes for the example gallery on this page looks like this ( an extra space is added before % and < so the codes aren't rendered):
 
-	{{ % gallery title="Example gallery" %}}
+	{{ < gallery title="Example gallery" >}}
 	{{ % galleryimage file="DSC_1283" size="1280x885" caption="This is me in Rome" copyrightHolder="Rasmus Helmer Hansen" %}}
 	{{ % galleryimage file="DSC_1350" size="993x1280" caption="This is Andrea in Rome" copyrightHolder="Tom Helmer Hansen" %}}
 	{{ % galleryimage file="DSC_1648" size="1280x857" caption="Rain reservoir in the hall." copyrightHolder="Tom Helmer Hansen" %}}
-	{{ % /gallery %}}
+	{{ < /gallery >}}
 
 	{{ % galleryinit %}}
 
