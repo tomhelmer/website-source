@@ -28,22 +28,22 @@ I use Cloudinary to serve the images and these three settings from the page fron
 	galleryfolder = "gallery-1"
 	gallerythumbnail = "t_thumbnail"
 
-The shortcodes for the example gallery on this page looks like this ( an extra space is added before % and < so the codes aren't rendered):
+The shortcodes for the example gallery on this page looks like this:
 
-	{{ < gallery title="Example gallery" >}}
-	{{ % galleryimage file="DSC_1283" size="1280x885" caption="This is me in Rome" copyrightHolder="Rasmus Helmer Hansen" %}}
-	{{ % galleryimage file="DSC_1350" size="993x1280" caption="This is Andrea in Rome" copyrightHolder="Tom Helmer Hansen" %}}
-	{{ % galleryimage file="DSC_1648" size="1280x857" caption="Rain reservoir in the hall." copyrightHolder="Tom Helmer Hansen" %}}
-	{{ < /gallery >}}
+	{{</* gallery title="Example gallery" */>}}
+	{{%/* galleryimage file="DSC_1283" size="1280x885" caption="This is me in Rome" copyrightHolder="Rasmus Helmer Hansen" */%}}
+	{{%/* galleryimage file="DSC_1350" size="993x1280" caption="This is Andrea in Rome" copyrightHolder="Tom Helmer Hansen" */%}}
+	{{%/* galleryimage file="DSC_1648" size="1280x857" caption="Rain reservoir in the hall." copyrightHolder="Tom Helmer Hansen" */%}}
+	{{</* /gallery */>}}
 
-	{{ % galleryinit %}}
+	{{%/* galleryinit */%}}
 
 The image sizes are needed by PhotoSwipe.
 
 ## How to set it up
 - Copy "photoswipe.min.js" and "photoswipe-ui-default.min.js" from PhotoSwipe (https://github.com/dimsemenov/PhotoSwipe/tree/master/dist) to your static/js folder.
 - Copy "photoswipe.css" and "default-skin" folder from PhotoSwipe (https://github.com/dimsemenov/PhotoSwipe/tree/master/dist) to your static/css folder. (or you can use the scss files from PhotoSwipe)
-- Copy [Modified DOM initialization script](/js/initphotoswipe.js) to your static/js folder (slightly modified from the photoswipe example to ignore extra paragraph tags inserted by hugo when rendering paired shortcodes.
+- Copy [Modified DOM initialization script](/js/initphotoswipe.js) to your static/js folder (slightly modified from the photoswipe example to ignore extra paragraph tags inserted by hugo when rendering paired shortcodes (note: this is fixed in 0.13).
 - Add shortcode gallery.html:
 
 	 	<div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">

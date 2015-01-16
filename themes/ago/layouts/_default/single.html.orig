@@ -5,8 +5,6 @@
 {{ $categories := .Params.categories }}
 {{ $tags := .Params.tags }}
 
-{{ $muutname := trim ( replace .RelPermalink "/" "-" ) "-" }}
-
 <section>
 <article class="single">
 
@@ -58,9 +56,39 @@
   }
 </style>
 
-<a class="muut" href="https://muut.com/i/thehome/comments:{{$muutname}}" data-show_title="false">Comments</a>
 
+<a class="muut" href="https://muut.com/i/thehome/comments:{{ trim ( replace .RelPermalink "/" "-" ) "-" }}" data-show_title="false">Comments</a>
 <script src="//cdn.muut.com/1/moot.min.js"></script>
+
+
+<script>
+
+  // var conf = {
+  // 	 //login_url: 'https://adapt.dk/',
+  //    url: "https://muut.com/i/thehome/comments:{{ trim ( replace .RelPermalink "/" "-" ) "-" }}",
+  //    show_online: true,
+  //    upload: false
+  //    //api : { }
+  // };
+
+	// $.ajax({
+	//    type: 'GET',
+	//     url: "http://dsr.dev/auth.php?callback=?",
+	//     async: false,
+	//     jsonpCallback: 'jsonCallback',
+	//     contentType: "application/json",
+	//     dataType: 'jsonp',
+	//     success: function(json) {
+	//        conf.api = json.api;
+	//        $("#muut-custom").muut(conf);
+	//     },
+	//     error: function(e) {
+	//        // console.log(e.message);
+	//     }
+	// });
+	//$("#muut-custom").muut(conf);
+
+</script>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
