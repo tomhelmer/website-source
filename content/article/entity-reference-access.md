@@ -1,7 +1,7 @@
 +++
 title = "CTools access plugin : Entity reference has value"
 date = "2015-01-23"
-draft = true
+draft = false
 image = "ctools.jpg"
 categories = ["Drupal"]
 tags = ["Code example"]
